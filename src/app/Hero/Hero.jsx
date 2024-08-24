@@ -13,7 +13,7 @@ const Hero = () => {
     {
       name: "TESTED AND TRUSTED",
       description: "WELCOME TO HOME OF QUALITY. WE ARE HAPPY TO MAKE YOU GLITTER",
-      img: "/hand-gold.avif",
+      img: "/gold-bar.jpg",
       btn: "Shop Now",
     },
   ];
