@@ -32,11 +32,11 @@ const Section1 = () => {
     ]
   return (
     <>
-        <div className='bg-[black]'>
-          <div className=''>
+        <div className='bg-white flex justify-center gap-[20px] py-[10px]'>
+          <div className='flex flex-col text-center w-[30vw]'>
                 {
                     golds.map((g,index)=>(
-                        <div className='border-2 text-white' key={index}>
+                        <div className='border-2 text-white bg-[#D3D3D3] h-[10vh] flex flex-col text-center' key={index}>
                             <h3>{g.headers}</h3>
                             <p>{g.content}</p>
                         </div>
@@ -44,9 +44,11 @@ const Section1 = () => {
                 }
           </div>
             <div>
-               <Image src='/bangless.png' width={500} height={300}/> 
+               <Image className='h-[60vh] w-[25vw]' src='/images/gold-bar2.jpg' width={500} height={300}/> 
             </div>
-            <div></div>
+            <div>
+               <Image className='h-[60vh] w-[25vw]' src='/images/gold-bar2.jpg' width={500} height={300}/> 
+            </div>
         </div>
     </>
   )
