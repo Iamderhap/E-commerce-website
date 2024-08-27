@@ -21,7 +21,7 @@ const Nav = () => {
                         <select className='cursor-pointer border-[#FFD700] border-[1px] py-[11px] px-[7px] focus:outline-none'  name="" id="">
                           <option value="">jewelries</option>
                           <option value="">jewelries</option>
-                          <option value="">jewelries</option>
+                          <option value="">GOLD</option>
                           <option value="">jewelries</option>
                           <option value="">jewelries</option>
 
