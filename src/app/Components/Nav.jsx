@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import { FiSearch } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
 import { FaRegHeart } from "react-icons/fa";
@@ -9,6 +10,8 @@ import { MdOutlineMail } from "react-icons/md";
 import Image from 'next/image'
 
 const Nav = () => {
+  const accounts = ["Register", "Checkout", "Login",];
+  const [open, setOpen] = useState (false);
   return (
         <div className='px-[70px] bg-black py-[10px] gap-[10px]'>
           <nav className=' flex justify-around items-center py-[10px] border-b-2 border-b-[grey]'>
@@ -30,7 +33,21 @@ const Nav = () => {
                     </form>
                 </div>
                 <ul className='flex gap-[15px] text-white items-center'>
-                    <li className='flex items-center gap-[7px] hover:text-[#FFD700] hover:cursor-pointer'><VscAccount />Account</li>
+                    {
+                      open &&
+                      <div className='bg-white w-52 p-4 shadow-lg text-lg rounded pt-4'>
+                        <ul>
+                          {
+                            accounts.map((account)=>(
+                              <li key={account} onClick={()=>setOpen(!open)} className='flex items-center gap-[7px] hover:text-[#FFD700] bg-blue-100 hover:cursor-pointer'>{account}</li>
+                            ))
+
+                          }
+                        </ul>
+                      </div>
+                     
+                    }
+                    <li onClick={()=>setOpen (!open)} className='flex items-center gap-[7px] hover:text-[#FFD700] hover:cursor-pointer'><VscAccount />Account</li>
                     <li className='flex items-center gap-[7px] hover:text-[#FFD700] hover:cursor-pointer'><FaRegHeart />Wishlist</li>
                     <li className='flex items-center gap-[7px] hover:text-[#FFD700] hover:cursor-pointer'><LuShoppingCart />Cart</li>
                 </ul>
@@ -54,3 +71,13 @@ const Nav = () => {
 }
 
 export default Nav
+
+
+
+
+
+
+
+
+
+
